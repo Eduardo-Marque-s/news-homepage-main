@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Dancing+Script:wght@500&family=Fraunces:opsz,wght@9..144,700&family=Hanken+Grotesk:wght@500;700;800&family=Inter:wght@400;700;800&family=Josefin+Sans:wght@300;400;600&family=Karla:wght@400;700&family=Kumbh+Sans:wght@400;700&family=Lato:wght@300;400;700;900&family=League+Spartan:wght@400;500;700&family=Lexend+Deca&family=Libre+Franklin:wght@300;600;700&family=Manrope:wght@500;700&family=Montserrat:wght@500;700&family=Ms+Madi&family=Noto+Sans+JP:wght@100&family=Open+Sans&family=Outfit:wght@300;400;600;700&family=Overpass:wght@400;700&family=Poppins:wght@400;500;600;700&family=Red+Hat+Display:wght@500;700;900&display=swap');
+:root{
+--Soft-orange: hsl(35, 77%, 62%);
+--Soft-red: hsl(5, 85%, 63%);
+
+--Off-white: hsl(36, 100%, 99%);
+--Grayish-blue: hsl(233, 8%, 79%);
+--Dark-grayish-blue: hsl(236, 13%, 42%);
+--Very-dark-blue: hsl(240, 100%, 5%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    
+}
+
+img{
+    max-width: 100%;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+p{
+line-height: 1.8;
+color: hsl(236, 13%, 42%);
+}
+
+html{
+    font-size: 15px;
+}
+
+body{
+    max-width: 1200px;
+    margin: auto;
+    background-color: hsl(36, 100%, 99%);
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.header nav #close-button{
+    background: transparent;
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 1.25rem;
+    top: 1.25rem;
+    z-index: 99999;
+    cursor: pointer;
+}
+
+.header nav{
+    opacity: 0;
+    z-index: -999;
+    transition: all 0.3s ease-in-out;
+}
+
+.header nav.open{
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 75vw;
+    background-color: white;
+    padding: 1.25rem;
+    opacity: 1;
+    z-index: 99999999999;
+}
+
+.header nav ul{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header nav ul li{
+ margin: 1.5rem 0;
+ font-size: 16px;
+ cursor: pointer;
+}
+
+.header nav ul li:hover{
+    color: hsl(5, 85%, 63%);
+}
+
+.header .menu button{
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.primeiro{
+    padding: 1.25rem;
+    padding-top: 0;
+}
+
+.primeiro h1{
+    font-size: 2rem;
+    font-weight: 800;
+    color: hsl(240, 100%, 5%);
+    margin: 1rem 0;
+}
+
+.primeiro div:first-child article p{
+    margin-bottom: 1rem;
+}
+
+.primeiro div:first-child article button{
+    background-color: hsl(5, 85%, 63%);
+    color: white;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.primeiro div:first-child article button:hover{
+    background-color: hsl(240, 100%, 5%);
+    cursor: pointer;
+}
+
+.primeiro > div:last-child{
+    background-color: hsl(240, 100%, 5%);
+    margin-top: 2rem;
+    padding: 1.25rem 1.25rem 0;
+}
+
+.primeiro > div:last-child h2{
+    color: hsl(35, 77%, 62%);
+}
+
+.primeiro > div:last-child article{
+    padding: 1.25rem 0;
+}
+
+.primeiro > div:last-child article:not(:last-child){
+    border-bottom: 1px solid hsl(236, 13%, 42%);
+}
+
+.primeiro > div:last-child h3{
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.primeiro > div:last-child h3:hover {
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+
+.segundo{
+    padding: 1.25rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2.5rem;
+}
+
+.segundo article{
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.segundo article img{
+    width: 150px;
+} 
+
+.segundo article span{
+    color: hsl(236, 13%, 42%);
+    font-weight: bold;
+    font-size: 2rem;
+    opacity: 75%;
+}
+
+.segundo article span h4{
+    font-size: 1.25rem;
+    color: hsl(240, 100%, 5%);
+    margin: 1rem 0;
+}
+
+@media (min-width:768px) {
+    .segundo{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 2rem;
+
+    }
+}
+
+@media (min-width: 1024px) {
+    .header{
+        padding: 2rem 1.25rem;
+        margin-top: 90px;
+    }
+
+    .header nav{
+        opacity: 1;
+        z-index: auto;
+        width: 100%;
+    }
+
+    .header nav.open{
+        position: relative;
+        width: auto;
+        background-color: transparent;
+        padding: 0;
+        z-index: auto;
+    }
+    
+    .header nav #close-button{
+        display: none;
+    }
+
+    .header nav ul{
+        position: relative;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 2rem;
+        transform: translateY(0%);
+    }
+
+    .header nav ul li {
+        margin: 0;
+
+    }
+
+    .header .menu button{
+        display: none;
+    }
+
+    .primeiro{
+        display: flex;
+        gap: 2rem;
+        margin-top: 40px;
+    }
+
+    .primeiro h1{
+        font-size: 65px;
+    }
+
+    .primeiro > div:first-child article {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        place-items: center;
+        margin-top: 10px;
+    }
+
+    .primeiro > div:last-child{
+        width: 750px;
+        height: 510px;
+        margin-top: 0;
+    }
+
+    
+
+    .segundo{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .segundo article{
+        width: 390px;
+        height: 160px;
+    }
+
+    .segundo article h4{
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .segundo article img{
+        width: 125px;
+    } 
+
+    .segundo article div{
+        margin-bottom: 30px;
+        
+        
+    }
+
+    .primeiro div:first-child article p{
+        margin-bottom: 5rem;
+        padding-right: 1.5rem;
+    }
+}
